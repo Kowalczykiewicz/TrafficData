@@ -34,7 +34,7 @@ object JsonParser {
     implicit val resultEncoder: Encoder[TrafficOutput] = deriveEncoder[TrafficOutput]
 
     nodes match {
-      case Nil => println("Hisss"); Failure(ParserException("No traffic data"))
+      case Nil => Failure(ParserException("No traffic data"))
       case node :: Nil =>
         val summary = TrafficOutput(node, node, Nil, 0)
         Success(summary.asJson)
