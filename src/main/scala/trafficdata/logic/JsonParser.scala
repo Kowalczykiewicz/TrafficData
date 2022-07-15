@@ -31,7 +31,7 @@ object JsonParser {
 
   def getTrafficOutput(nodes: List[Node], distanceTime: Double): Try[Json] = {
     implicit val nodeEncoder: Encoder[Node] = deriveEncoder[Node]
-    implicit val resultEncoder: Encoder[TrafficOutput] = deriveEncoder[TrafficOutput]
+    implicit val trafficOutputEncoder: Encoder[TrafficOutput] = deriveEncoder[TrafficOutput]
 
     nodes match {
       case Nil => Failure(ParserException("No traffic data"))
