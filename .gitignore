@@ -1,0 +1,10 @@
+build
+logs
+target
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/.bsp
+
